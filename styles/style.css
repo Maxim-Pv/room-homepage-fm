@@ -1,0 +1,198 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+}
+
+.container {
+    display: grid;
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+}
+
+.section-menu { 
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.background-0 {
+    background: url(../images/desktop-image-hero-1.jpg);
+}
+
+.background-1 {
+    background: url(../images/desktop-image-hero-2.jpg);
+}
+
+.background-2 {
+    background: url(../images/desktop-image-hero-3.jpg);
+}
+
+.section-menu__heading {
+    margin: 3rem 3rem 0 5rem;
+    font-size: 27px;
+    font-weight: 400;
+    color: white;
+}
+
+.nav {
+    margin-top: 3.5rem;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-transform: lowercase;
+}
+
+.nav-link:not(:last-child) {
+    margin-right: 20px;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 55%;
+    height: 2px;
+    background-color: white;
+    opacity: 0;
+    left: 50%;
+    position: absolute;
+    bottom: -10px;
+    transform: translateX(-50%);
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover:after {
+    opacity: 1;
+}
+
+/* section-shop */
+
+.section-shop {
+    padding: 7rem 5.5rem 8.6rem;
+    position: relative;
+}
+
+.section-shop__content {
+    display: none;
+}
+
+.section-shop__heading {
+    font-size: 38px;
+    line-height: 1;
+    margin-bottom: 22px;
+}
+
+.section-shop__description {
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: .1px;
+    margin-bottom: 20px;
+    color: hsl(0, 0%, 63%);
+}
+
+.section-shop__left-arrow {
+    letter-spacing: 9px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.section-shop__left-arrow:hover {
+    color: hsl(0, 0%, 63%);
+    transition: color 0.3s ease;
+}
+
+.section-shop__left-arrow:hover svg path {
+    fill: hsl(0, 0%, 63%);
+    transition: fill 0.3s ease;
+}
+
+.arrows-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 70px;
+    height: 70px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+    background-color: hsl(0, 0%, 27%);
+}
+
+.arrow svg path {
+    stroke: hsl(0, 0%, 63%);
+}
+
+.active {
+    display: block;
+}
+
+/* section-about */
+
+.section-about {
+    display: grid;
+    grid-template-columns: .96fr 1.24fr 1fr;
+}
+
+.left-background {
+    background: url(../images/image-about-dark.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.about {
+    padding: 3.6rem 2.6rem;
+
+}
+
+.section-about__heading {
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.section-about__description {
+    font-size: 15px;
+    line-height: 1.3;
+    letter-spacing: -.5px;
+    color: hsl(0, 0%, 63%);
+}
+
+.right-background {
+    background: url(../images/image-about-light.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
