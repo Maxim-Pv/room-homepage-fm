@@ -48,7 +48,6 @@ I plan to continue improving my skills in responsive design and exploring more a
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 - Frontend Mentor - [Maxim](https://www.frontendmentor.io/profile/Maxim-Pv)
 - LinkedIn - [Maksim Pavlov]([https://www.twitter.com/yourusername](https://www.linkedin.com/in/maksim-pavlov-12b22528b/))
 
