@@ -1,6 +1,8 @@
 const backgroundMenu = document.querySelector('.section-menu')
 const arrows = document.querySelectorAll('.arrow')
 const content = document.querySelectorAll('.section-shop__content')
+const mainContent = document.querySelector('.main-content')
+const overlay = document.querySelector('.overlay')
 let value = 0
 
 function show(index) {
@@ -59,6 +61,20 @@ function navigate(direction) {
     show(index);
 }
 
-
-
 show(value)
+
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('burger').addEventListener('click', () => {
+        mainContent.classList.toggle('open');
+        if (mainContent.classList.contains('open')) {
+            overlay.style.display = 'block';
+        } else {
+            overlay.style.display = 'none';
+        }
+    })
+})
+
+overlay.addEventListener('click', () => {
+    mainContent.classList.remove('open');
+    overlay.style.display = 'none';
+})

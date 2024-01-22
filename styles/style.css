@@ -17,7 +17,8 @@ body {
 
 .main-content {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1.4fr 600px;
+    height: 500px;
 }
 
 .section-menu { 
@@ -27,21 +28,66 @@ body {
     background-size: 100% 100%;
 }
 
+.section-menu__burger-btn {
+    display: none;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: inherit;
+    z-index: 2;
+}
+
+.section-menu__burger-btn span {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    left: 5px;
+    transition: transform .4s, opacity .3s;
+}
+
+.section-menu__burger-btn span:nth-child(1) {
+    transform: translateY(6px);
+}
+
+.section-menu__burger-btn span:nth-child(3) {
+    transform: translateY(-6px);
+}
+
+.main-content.open .section-menu__burger-btn span {
+    background-color: hsl(0, 0%, 63%);
+}
+
+.main-content.open .section-menu__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.main-content.open .section-menu__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.main-content.open .section-menu__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
 .background-0 {
-    background: url(../images/desktop-image-hero-1.jpg);
+    background-image: url(../images/desktop-image-hero-1.jpg);
 }
 
 .background-1 {
-    background: url(../images/desktop-image-hero-2.jpg);
+    background-image: url(../images/desktop-image-hero-2.jpg);
 }
 
 .background-2 {
-    background: url(../images/desktop-image-hero-3.jpg);
+    background-image: url(../images/desktop-image-hero-3.jpg);
 }
 
 .section-menu__heading {
     margin: 3rem 3rem 0 5rem;
-    font-size: 27px;
+    font-size: 30px;
     font-weight: 400;
     color: white;
 }
@@ -130,23 +176,27 @@ body {
 }
 
 .arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
     width: 70px;
     height: 70px;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.arrow:hover {
-    background-color: hsl(0, 0%, 27%);
+.prev {
+    background-image: url(../images/icon-angle-left.svg);
 }
 
-.arrow svg path {
-    stroke: hsl(0, 0%, 63%);
+.next {
+    background-image: url(../images/icon-angle-right.svg);
+}
+
+.arrow:hover {
+    background-color: hsl(0, 0%, 27%);
 }
 
 .active {
@@ -157,7 +207,7 @@ body {
 
 .section-about {
     display: grid;
-    grid-template-columns: .96fr 1.24fr 1fr;
+    grid-template-columns: .96fr 1.24fr 460px;
 }
 
 .left-background {
@@ -166,8 +216,8 @@ body {
 }
 
 .about {
+    position: relative;
     padding: 3.6rem 2.6rem;
-
 }
 
 .section-about__heading {
@@ -190,9 +240,182 @@ body {
 }
 
 .attribution { 
-    font-size: 11px; text-align: center; 
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    font-size: 11px; 
+    color: rgba(0, 0, 0, 0.288);
+    transform: translateX(-50%);
 }
     
 .attribution a { 
-    color: hsl(228, 45%, 44%); 
+    color: #79554877; 
+    text-decoration: none;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0; 
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .main-content {
+        grid-template-columns: 1.4fr 1fr;
+    }
+
+    .section-shop {
+        padding: 3.5rem 5rem 5.6rem;
+    }
+
+    .section-about {
+        display: grid;
+        grid-template-columns: .96fr 1.24fr 317px;
+    }
+
+    .arrow {
+        width: 55px;
+        height: 55px;
+        background-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        height: unset;
+    }
+
+    .section-menu {
+        height: 600px;
+    }
+
+    .section-shop__description {
+        margin-bottom: 3rem;
+        font-size: 16px;
+    }
+
+    .section-about {
+        display: grid;
+        grid-template-columns: .96fr 1.24fr 286px;
+    }
+
+    .arrows-container {
+        left: unset;
+        right: 0;
+        top: -70px;
+    }
+
+    .section-shop,
+    .about {
+        padding: 5rem;
+    }
+
+    .section-about {
+        grid-template-columns: 1fr;
+    }
+
+    .section-about__description {
+        letter-spacing: 1px;
+    }
+
+    .left-background,
+    .right-background {
+        height: 400px;
+    }
+
+}
+
+
+@media (max-width: 425px) {
+    .main-content,
+    .section-about {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-menu {
+        display: block;
+        height: 300px;
+    }
+
+    .section-menu__heading {
+        position: absolute;
+        margin: unset;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .section-menu__burger-btn {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        padding: 40px 20px 40px 120px;
+        left: -100%;
+        top: 0;
+        width: 100%;
+        margin: unset;
+        background-color: white;
+        transition: transform .4s;
+    }
+
+    .nav-link {
+        color: black;
+    }
+
+    .main-content.open .nav {
+        transform: translateX(100%);
+    }
+
+    .main-content.open .overlay {
+        display: block;
+    }
+
+    .background-0 {
+        background-image: url(../images/mobile-image-hero-1.jpg) no-repeat;
+    }
+    
+    .background-1 {
+        background-image: url(../images/mobile-image-hero-2.jpg) no-repeat;
+    }
+    
+    .background-2 {
+        background-image: url(../images/mobile-image-hero-3.jpg) no-repeat;
+    }
+
+    .left-background,
+    .right-background {
+        height: 250px;
+    }
+
+    .section-shop__description,
+    .section-about__description {
+        font-size: 14px;
+    }
+
+    .arrows-container {
+        top: -55px;
+    }
+
+    .arrow {
+        width: 55px;
+        height: 55px;
+        background-size: 10px;
+    }
+
+    .section-shop,
+    .about {
+        padding: 3rem 2rem 4rem;
+    }
+
+    .section-shop__heading {
+        font-size: 35px;
+    }
+
 }

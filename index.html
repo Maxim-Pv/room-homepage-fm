@@ -11,9 +11,13 @@
   </style>
 </head>
 <body>
-  <main class="container">
+  <div class="overlay"></div>
+  <div class="container">
     <div class="main-content">
-      <section class="section-menu background-1">
+      <section class="section-menu background-0">
+        <button id="burger" class="section-menu__burger-btn">
+          <span></span><span></span><span></span>
+        </button>
         <h2 class="section-menu__heading">room</h2>
         <nav class="nav">
           <a href="" class="nav-link">Home</a>
@@ -54,20 +58,11 @@
             </svg>
           </a>
           <div class="arrows-container">
-            <button class="prev arrow">
-              <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 0L1 12l12 12" stroke="#FFF" fill="none" fill-rule="evenodd"/>
-              </svg>
-            </button>
-            <button class="next arrow">
-              <svg width="14" height="24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1 0l12 12L1 24" stroke="#FFF" fill="none" fill-rule="evenodd"/>
-              </svg>
-            </button>
+            <button class="prev arrow"></button>
+            <button class="next arrow"></button>
           </div>
       </section>
     </div>
-    
     <section class="section-about">
       <div class="left-background"></div>
       <div class="about">
@@ -78,13 +73,14 @@
           inspires you. Find the furniture pieces you need, from traditional to contemporary styles
           or anything in between. Product specialists are available to help you create your dream space.
         </p>
+        <div class="attribution">
+          Coded by <a href="#">Maxim Pavlov</a>.
+        </div>
       </div>
       <div class="right-background"></div>
     </section>
-  </main> 
-  <div class="attribution">
-    Coded by <a href="#">Maxim Pavlov</a>.
-  </div>
+  </div> 
+
   <script src="./main.js"></script>
 </body>
 </html>
