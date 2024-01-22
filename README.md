@@ -14,13 +14,17 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-![](./screenshot.jpg)
+![active-states](screenshots/active-states.jpg)
+![desktop-design](screenshots/desktop-design-slide-1.jpg)
+![desktop-design2](screenshots/desktop-design-slide-2.jpg)
+![desktop-design2](screenshots/desktop-design-slide-3.jpg)
+![mobile-desig](screenshots/mobile-design.jpg)
+![mobile-navigation](screenshots/mobile-navigation.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Maxim-Pv/room-homepage-fm)
+- Live Site URL: [Add live site URL here](https://room-homepage-fm-kappa.vercel.app/)
 
 ## My process
 
@@ -31,7 +35,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workfloww
-
+- Vanilla javascript
+  
 
 ### What I learned
 
@@ -44,9 +49,10 @@ I plan to continue improving my skills in responsive design and exploring more a
 ## Author
 
 - Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [Maxim](https://www.frontendmentor.io/profile/Maxim-Pv)
+- LinkedIn - [Maksim Pavlov]([https://www.twitter.com/yourusername](https://www.linkedin.com/in/maksim-pavlov-12b22528b/))
 
 ## Acknowledgments
 
 I would like to acknowledge the Frontend Mentor community for providing challenging projects that enhance my skills.
+
