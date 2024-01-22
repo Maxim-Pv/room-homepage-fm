@@ -23,8 +23,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Maxim-Pv/room-homepage-fm)
-- Live Site URL: [Add live site URL here](https://room-homepage-fm-kappa.vercel.app/)
+- Solution URL: [solution](https://github.com/Maxim-Pv/room-homepage-fm)
+- Live Site URL: [live site](https://room-homepage-fm-kappa.vercel.app/)
 
 ## My process
 
